@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/container";
-import { MailLink, PhoneLink } from "@/components/mail-link";
+import { MailLink, PhoneLink, WhatsAppLink } from "@/components/mail-link";
 import { business } from "@/config/business";
 import {
   footerCompanyLinks,
@@ -47,10 +47,13 @@ export function SiteFooter() {
             {business.address.country}. {business.parking}.
           </p>
           <p className="mt-3 text-sm">
-            <MailLink className="text-ink underline underline-offset-4" />
+            <MailLink className="inline-flex min-h-11 items-center text-ink underline underline-offset-4" />
           </p>
-          <p className="mt-2 text-sm">
-            <PhoneLink className="text-ink underline underline-offset-4" />
+          <p className="text-sm">
+            <PhoneLink className="inline-flex min-h-11 items-center text-ink underline underline-offset-4" />
+          </p>
+          <p className="text-sm">
+            <WhatsAppLink className="inline-flex min-h-11 items-center text-ink underline underline-offset-4" />
           </p>
           <p className="mt-4 text-sm text-muted">
             Studio rates are hourly and exclude VAT.

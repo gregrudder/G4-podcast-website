@@ -22,12 +22,41 @@ export function MailLink({
   );
 }
 
-export function PhoneLink({ className }: { className?: string }) {
-  if (!business.phone) return null;
-  const href = `tel:${business.phone.replace(/\s/g, "")}`;
+export function PhoneLink({
+  className,
+  children,
+}: {
+  className?: string;
+  children?: ReactNode;
+}) {
   return (
-    <a className={className} href={href} onClick={() => track("tel_click")}>
-      {business.phone}
+    <a
+      className={className}
+      href={business.phone.href}
+      onClick={() => track("tel_click")}
+    >
+      {children ?? business.phone.display}
+    </a>
+  );
+}
+
+export function WhatsAppLink({
+  className,
+  children,
+}: {
+  className?: string;
+  children?: ReactNode;
+}) {
+  return (
+    <a
+      className={className}
+      href={business.whatsapp.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => track("whatsapp_click")}
+    >
+      {children ?? business.whatsapp.label}
+      <span className="sr-only"> (opens in WhatsApp)</span>
     </a>
   );
 }

@@ -39,7 +39,7 @@ export default function CookiesPage() {
         After acceptance, Google Analytics sets its own cookies (commonly named
         _ga and related) and receives page views and the events this site
         sends: form submissions that were emailed, clicks on email links, clicks
-        on phone links if a phone number is shown, and clicks on booking
+        on the phone link, clicks on WhatsApp links, and clicks on booking
         buttons. Google’s own description of those cookies is at
         policies.google.com.
       </p>

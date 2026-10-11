@@ -1,13 +1,11 @@
 # Needs confirmation from Greg
 
-Confirmed and already in the site: legal entity G4 Marketing Ltd; trading name G4 Podcast Studio & Marketing; domain g4podcast.net; email info@g4-marketing.net; Wishaw, North Lanarkshire, Scotland; two podcast studios; free parking; on-location recording; the kit list in `config/business.ts`; the services list; hourly studio rates in `data/packages.ts` (Bronze £40, Silver £70, Gold £90, Platinum £130, all + VAT); social media management with no fixed price and the call to action “Book a consultation”; short-form and editing as quotes; permission to name A Pint and Two Shots (Grado, Stephen Purdon, Chris Toal), Leather’d (MMA, Paul Craig and Ross Cooper) and Roughing The Podcasters (NFL). No outcome statistics are published.
+Confirmed and already in the site: legal entity G4 Marketing Ltd; trading name G4 Podcast Studio & Marketing; domain g4podcast.net; email info@g4-marketing.net; phone and WhatsApp 07925 707766 (+44 7925 707766); Wishaw, North Lanarkshire, Scotland; two podcast studios; free parking; on-location recording; the kit list in `config/business.ts`; the services list; hourly studio rates in `data/packages.ts` (Bronze £40, Silver £70, Gold £90, Platinum £130, all + VAT); social media management with no fixed price and the call to action “Book a consultation”; short-form and editing as quotes; permission to name A Pint and Two Shots (Grado, Stephen Purdon, Chris Toal), Leather’d (MMA, Paul Craig and Ross Cooper) and Roughing The Podcasters (NFL). No outcome statistics are published.
 
 The old website and the Daily Record used some of the values below. They are **not** on the new site. Publish them only after Greg confirms they are still correct.
 
 ## Contact and place
 
-- [ ] Phone number. The old site showed 07925 707766. `business.phone` is null until confirmed. A confirmed number will show in the header and footer and will fire `tel_click`.
-- [ ] WhatsApp number, if it should be a secondary call to action.
 - [ ] Full street address and postcode. The old site and press used 9 Pickering Works, Netherton Road, Wishaw ML2 0EQ. Confirm the visitor entrance, not only the registered office.
 - [ ] Opening hours, and whether evenings or weekends are bookable. Public place data has shown “Open 24 hours”, which should not be copied if it is wrong.
 - [ ] Drive times and directions from Glasgow, Motherwell, Hamilton and East Kilbride. Nearest station and walking or taxi note. Do not publish a guessed mileage.

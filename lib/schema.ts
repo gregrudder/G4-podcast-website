@@ -24,6 +24,7 @@ export function localBusinessNode() {
     name: business.tradingName,
     url: business.siteUrl,
     email: business.email,
+    telephone: business.phone.e164,
     image: absoluteUrl(
       "/og?title=Podcast%20and%20video%20studios%20in%20Wishaw",
     ),

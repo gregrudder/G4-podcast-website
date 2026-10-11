@@ -18,10 +18,16 @@ export const business = {
   siteUrl: "https://www.g4podcast.net",
   email: "info@g4-marketing.net",
   locale: "en-GB",
-  phone: null as string | null,
-  phoneStatus: NEEDS_CONFIRMATION,
-  whatsapp: null as string | null,
-  whatsappStatus: NEEDS_CONFIRMATION,
+  /** Display is UK national format. `href` is E.164 so `tel:` does not dial a leading 0. */
+  phone: {
+    display: "07925 707766",
+    href: "tel:+447925707766",
+    e164: "+447925707766",
+  },
+  whatsapp: {
+    href: "https://wa.me/447925707766",
+    label: "WhatsApp us",
+  },
   address: {
     streetAddress: null as string | null,
     streetAddressStatus: NEEDS_CONFIRMATION,

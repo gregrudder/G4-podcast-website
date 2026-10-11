@@ -65,7 +65,7 @@ export const faqs: readonly Faq[] = [
   {
     id: "booking",
     question: "How do I book?",
-    answer: `Use the contact form or email ${email}. Tell us the show or business, what you need, and any dates you have in mind. We reply by email. A booking exists only when we confirm it in writing. The form does not take payment.`,
+    answer: `Use the contact form, email ${email}, call ${business.phone.display}, or WhatsApp the same number. Tell us the show or business, what you need, and any dates you have in mind. We reply by email. A booking exists only when we confirm it in writing. The form does not take payment.`,
   },
   {
     id: "files",

@@ -5,6 +5,7 @@ import { SiteAnalytics } from "@/components/analytics";
 import { CookieNotice } from "@/components/cookie-notice";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { business } from "@/config/business";
 import { lowestStudioRate } from "@/data/packages";
 import { allowIndexing } from "@/lib/indexing";
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </main>
         <SiteFooter />
+        <WhatsAppFloat />
         <CookieNotice />
         <SiteAnalytics />
       </body>

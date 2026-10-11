@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Container } from "@/components/container";
-import { MailLink } from "@/components/mail-link";
+import { MailLink, PhoneLink, WhatsAppLink } from "@/components/mail-link";
 import { business } from "@/config/business";
 import { pageMeta } from "@/lib/metadata";
 
@@ -31,9 +31,9 @@ export default function AboutPage() {
             management sit alongside studio hire.
           </p>
           <p>
-            The website is {business.domain}. Enquiries go to{" "}
-            <MailLink />. The street address, phone number and opening hours are
-            not published on this page yet.
+            The website is {business.domain}. Enquiries go to <MailLink />, or
+            call <PhoneLink />, or <WhatsAppLink />. The street address and
+            opening hours are not published on this page yet.
           </p>
           <h2>Where</h2>
           <p>

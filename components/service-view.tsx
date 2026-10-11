@@ -7,6 +7,7 @@ import { Container } from "@/components/container";
 import { CtaBand } from "@/components/cta-band";
 import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
+import { MailLink, PhoneLink, WhatsAppLink } from "@/components/mail-link";
 import type { ServiceRecord } from "@/data/services";
 import { services } from "@/data/services";
 import { graph, serviceNode, studioOfferNodes } from "@/lib/schema";
@@ -61,7 +62,12 @@ export function ServiceView({
             <Link href="/pricing" className={secondaryButtonClass}>
               See pricing
             </Link>
+            <WhatsAppLink className={secondaryButtonClass} />
           </div>
+          <p className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+            <PhoneLink className="inline-flex min-h-11 items-center text-ink underline underline-offset-4" />
+            <MailLink className="inline-flex min-h-11 items-center text-ink underline underline-offset-4" />
+          </p>
         </Container>
       </header>
       <Container className="space-y-14 py-14 md:py-20">

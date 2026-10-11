@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticlePage } from "@/components/article-page";
-import { MailLink } from "@/components/mail-link";
+import { MailLink, PhoneLink } from "@/components/mail-link";
 import { business } from "@/config/business";
 import { pageMeta } from "@/lib/metadata";
 
@@ -23,8 +23,8 @@ export default function PrivacyPage() {
       <h2>Who we are</h2>
       <p>
         The data controller is {business.legalName}, trading as {business.tradingName}.
-        The website is {business.domain}. Contact{" "}
-        <MailLink />. The full postal address is not published on this site yet.
+        The website is {business.domain}. Contact <MailLink /> or call{" "}
+        <PhoneLink />. The full postal address is not published on this site yet.
         The studios are in {business.address.locality}, {business.address.region},{" "}
         {business.address.country}.
       </p>

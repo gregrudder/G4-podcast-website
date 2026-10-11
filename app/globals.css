@@ -19,6 +19,16 @@ html {
   color-scheme: dark;
 }
 
+@media (max-width: 767px) {
+  html {
+    scroll-padding-bottom: 5.5rem;
+  }
+
+  body {
+    padding-bottom: 5.5rem;
+  }
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-ink);

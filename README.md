@@ -76,7 +76,8 @@ Conversion events, when the relevant tool is enabled:
 
 - `form_submit` — Resend accepted the enquiry. The email fallback and the honeypot do not count.
 - `mailto_click` — a `mailto:` link.
-- `tel_click` — a `tel:` link. None are rendered until `business.phone` is set.
+- `tel_click` — the phone link `tel:+447925707766`. The visible number is 07925 707766.
+- `whatsapp_click` — a WhatsApp link (`https://wa.me/447925707766`), including the mobile “WhatsApp us” button.
 - `booking_cta` — “Book a session”, “Book a consultation”, and the other enquiry buttons. The `intent` parameter is the checkbox id.
 
 ### DNS, when Greg is ready to cut over

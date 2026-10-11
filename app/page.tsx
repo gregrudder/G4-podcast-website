@@ -5,6 +5,7 @@ import { Container } from "@/components/container";
 import { CtaBand } from "@/components/cta-band";
 import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
+import { MailLink, PhoneLink, WhatsAppLink } from "@/components/mail-link";
 import { PlaceholderFrame } from "@/components/placeholder-frame";
 import { PricingTable } from "@/components/pricing-table";
 import { SetDiagram } from "@/components/set-diagram";
@@ -113,7 +114,12 @@ export default function HomePage() {
             <Link href="/pricing" className={secondaryButtonClass}>
               See pricing
             </Link>
+            <WhatsAppLink className={secondaryButtonClass} />
           </div>
+          <p className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+            <PhoneLink className="inline-flex min-h-11 items-center text-ink underline underline-offset-4" />
+            <MailLink className="inline-flex min-h-11 items-center text-ink underline underline-offset-4" />
+          </p>
         </Container>
         <Container className="grid border-t border-line sm:grid-cols-3">
           {[

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { secondaryButtonClass } from "@/components/button-styles";
 import { Container } from "@/components/container";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
-import { MailLink } from "@/components/mail-link";
+import { MailLink, PhoneLink, WhatsAppLink } from "@/components/mail-link";
 import { business } from "@/config/business";
 import { pageMeta } from "@/lib/metadata";
 import { graph, localBusinessNode, organizationNode } from "@/lib/schema";
@@ -33,10 +34,11 @@ export default function ContactPage() {
             email. The form does not take payment, and a date is not held until
             we confirm it in writing.
           </p>
-          <p className="mt-4 text-muted">
-            Or email <MailLink className="text-ink underline underline-offset-4" />{" "}
-            directly.
-          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <PhoneLink className={secondaryButtonClass} />
+            <MailLink className={secondaryButtonClass}>{business.email}</MailLink>
+            <WhatsAppLink className={secondaryButtonClass} />
+          </div>
           <div className="mt-10">
             <EnquiryForm />
           </div>
