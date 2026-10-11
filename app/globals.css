@@ -7,9 +7,12 @@
   --color-muted: #c8c2b8;
   --color-line: #2e2e2e;
   --color-danger: #ffb4b4;
-  --color-mark: #ff3b30;
-  --color-button: #7a1220;
-  --color-button-hover: #8e1018;
+  /* Brand red is #A80000. It is the button fill (white text is 7.9:1).
+     Thin marks use #d01010, the same hue at 3.6:1 on the page background. */
+  --color-brand: #a80000;
+  --color-mark: #d01010;
+  --color-button: #a80000;
+  --color-button-hover: #8a0000;
   --font-sans: var(--font-outfit), "Outfit", ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-instrument), "Times New Roman", serif;
 }
@@ -35,7 +38,7 @@ body {
 }
 
 ::selection {
-  background: #7a1220;
+  background: #a80000;
   color: #ffffff;
 }
 

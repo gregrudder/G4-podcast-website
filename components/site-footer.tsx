@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/container";
+import { Logo } from "@/components/logo";
 import { MailLink, PhoneLink, WhatsAppLink } from "@/components/mail-link";
 import { business } from "@/config/business";
 import {
@@ -38,7 +39,9 @@ export function SiteFooter() {
     <footer className="border-t border-line">
       <Container className="grid gap-10 py-14 md:grid-cols-4">
         <div>
-          <p className="font-display text-3xl text-mark">G4</p>
+          <Link href="/" className="inline-block">
+            <Logo variant="lockup-dark" alt="G4 podcast studio" className="h-auto w-48" />
+          </Link>
           <p className="mt-3 text-sm leading-relaxed text-ink">
             {business.legalName}, trading as {business.tradingName}.
           </p>

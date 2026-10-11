@@ -94,4 +94,4 @@ Details and the open questions are in `TODO.md`.
 
 UK English. No invented prices, inclusions, phone numbers, street address, opening hours, review quotes or outcome statistics. Unknowns stay in config and in `TODO.md`.
 
-The visual system is a dark, high-contrast production layout: solid colours, a red mark, serif headlines. No gradients, glow or glass effects.
+The visual system is a dark, high-contrast production layout: solid colours, the G4 red (`#A80000`), serif headlines. Logo files are in `public/brand` (red monogram, light lockup, and a white-and-red lockup for the dark page). No gradients, glow or glass effects.

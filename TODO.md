@@ -1,6 +1,6 @@
 # Needs confirmation from Greg
 
-Confirmed and already in the site: legal entity G4 Marketing Ltd; trading name G4 Podcast Studio & Marketing; domain g4podcast.net; email info@g4-marketing.net; phone and WhatsApp 07925 707766 (+44 7925 707766); Wishaw, North Lanarkshire, Scotland; two podcast studios; free parking; on-location recording; the kit list in `config/business.ts`; the services list; hourly studio rates in `data/packages.ts` (Bronze £40, Silver £70, Gold £90, Platinum £130, all + VAT); social media management with no fixed price and the call to action “Book a consultation”; short-form and editing as quotes; permission to name A Pint and Two Shots (Grado, Stephen Purdon, Chris Toal), Leather’d (MMA, Paul Craig and Ross Cooper) and Roughing The Podcasters (NFL). No outcome statistics are published.
+Confirmed and already in the site: legal entity G4 Marketing Ltd; trading name G4 Podcast Studio & Marketing; domain g4podcast.net; email info@g4-marketing.net; phone and WhatsApp 07925 707766 (+44 7925 707766); the G4 monogram and “podcast studio” lockup in `public/brand`; Wishaw, North Lanarkshire, Scotland; two podcast studios; free parking; on-location recording; the kit list in `config/business.ts`; the services list; hourly studio rates in `data/packages.ts` (Bronze £40, Silver £70, Gold £90, Platinum £130, all + VAT); social media management with no fixed price and the call to action “Book a consultation”; short-form and editing as quotes; permission to name A Pint and Two Shots (Grado, Stephen Purdon, Chris Toal), Leather’d (MMA, Paul Craig and Ross Cooper) and Roughing The Podcasters (NFL). No outcome statistics are published.
 
 The old website and the Daily Record used some of the values below. They are **not** on the new site. Publish them only after Greg confirms they are still correct.
 
@@ -44,7 +44,6 @@ The old website and the Daily Record used some of the values below. They are **n
 ## People, proof, assets
 
 - [ ] Current team, roles and photos. The old site listed Greg Rudder, Grant Rudder and Craig Pollock. Press has also named Nicole Rudder. None of these are published as the current team.
-- [ ] Logo files (SVG, for light and dark grounds). The site uses a typographic “G4” until a file arrives.
 - [ ] Photographs of both studios, both sets, the TV with branding, kit, exterior, entrance, parking, and sessions with consent. Diagrams are placeholders. No stock photos of people.
 - [ ] A short studio walkthrough video, and episode URLs that can be embedded.
 - [ ] Host names for Roughing The Podcasters, if they should be published.

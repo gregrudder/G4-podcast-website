@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BookLink } from "@/components/book-link";
 import { primaryButtonClass } from "@/components/button-styles";
+import { Logo } from "@/components/logo";
 import { business } from "@/config/business";
 import { primaryNav } from "@/data/navigation";
 
@@ -25,13 +26,9 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-bg">
       <div className="mx-auto flex w-full max-w-6xl items-center gap-3 px-4 py-3 md:px-6">
-        <Link href="/" className="mr-auto flex items-baseline gap-2">
-          <span aria-hidden="true" className="font-display text-3xl leading-none text-mark">
-            G4
-          </span>
-          <span aria-hidden="true" className="hidden text-sm text-ink lg:inline">
-            Podcast Studio &amp; Marketing
-          </span>
+        <Link href="/" className="mr-auto flex min-w-0 items-center gap-2">
+          <Logo variant="monogram" alt="" className="h-10 w-10 shrink-0" />
+          <Logo variant="wordmark-dark" alt="" className="hidden h-7 w-auto lg:block" />
           <span className="sr-only">{business.tradingName}, home</span>
         </Link>
 

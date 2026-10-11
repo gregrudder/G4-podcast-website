@@ -22,7 +22,7 @@ export function SetDiagram({
           stroke="#2e2e2e"
           strokeWidth="1.5"
         />
-        <rect x="48" y="48" width="120" height="68" fill="#3a1218" stroke="#ff3b30" />
+        <rect x="48" y="48" width="120" height="68" fill="#3a1218" stroke="#d01010" />
         <text x="108" y="88" textAnchor="middle" fill="#f4f1ea" fontSize="14">
           TV
         </text>
