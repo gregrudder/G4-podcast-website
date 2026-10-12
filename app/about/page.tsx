@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Container } from "@/components/container";
+import { GuestWaitingPhoto } from "@/components/guest-waiting-photo";
 import { MailLink, PhoneLink, WhatsAppLink } from "@/components/mail-link";
 import { business } from "@/config/business";
 import { pageMeta } from "@/lib/metadata";
@@ -42,6 +43,7 @@ export default function AboutPage() {
             Wishaw, the rest of Lanarkshire, and Glasgow. There is no second
             address in Glasgow, and this site does not pretend there is one.
           </p>
+          <GuestWaitingPhoto className="mt-6" />
           <h2 id="team">Team</h2>
           <p>
             Names, roles and photographs of the people who run the studios are
