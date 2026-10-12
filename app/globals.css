@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #090909;
+  --color-raised: #141414;
+  --color-ink: #f4f1ea;
+  --color-muted: #c8c2b8;
+  --color-line: #2e2e2e;
+  --color-danger: #ffb4b4;
+  /* Brand red is #A80000. It is the button fill (white text is 7.9:1).
+     Thin marks use #d01010, the same hue at 3.6:1 on the page background. */
+  --color-brand: #a80000;
+  --color-mark: #d01010;
+  --color-button: #a80000;
+  --color-button-hover: #8a0000;
+  --font-sans: var(--font-outfit), "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-instrument), "Times New Roman", serif;
+}
+
+html {
+  scroll-padding-top: 5.5rem;
+  color-scheme: dark;
+}
+
+@media (max-width: 767px) {
+  html {
+    scroll-padding-bottom: 5.5rem;
+  }
+
+  body {
+    padding-bottom: 5.5rem;
+  }
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: #a80000;
+  color: #ffffff;
+}
+
+:focus {
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 2px solid #f4f1ea;
+  outline-offset: 3px;
+}
+
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 60;
+  background: #f4f1ea;
+  color: #090909;
+  padding: 0.5rem 0.75rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.richtext h2 {
+  margin-top: 2.5rem;
+  font-family: var(--font-display), "Times New Roman", serif;
+  font-size: 2rem;
+  line-height: 1.15;
+  color: var(--color-ink);
+}
+
+.richtext h3 {
+  margin-top: 1.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.richtext p,
+.richtext ul,
+.richtext ol {
+  margin-top: 1rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+.richtext ul,
+.richtext ol {
+  padding-left: 1.25rem;
+}
+
+.richtext ul {
+  list-style: disc;
+}
+
+.richtext ol {
+  list-style: decimal;
+}
+
+.richtext li + li {
+  margin-top: 0.4rem;
+}
+
+.richtext a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.richtext strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .rate-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .rate-table tr {
+    display: block;
+    padding: 1.25rem 0;
+  }
+
+  .rate-table th,
+  .rate-table td {
+    display: block;
+    padding-right: 0;
+  }
+
+  .rate-table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
