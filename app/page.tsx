@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/json-ld";
 import { MailLink, PhoneLink, WhatsAppLink } from "@/components/mail-link";
 import { PlaceholderFrame } from "@/components/placeholder-frame";
 import { PricingTable } from "@/components/pricing-table";
-import { SetDiagram } from "@/components/set-diagram";
+import { ClientLogoScreen, Studio2Hero } from "@/components/studio-2-photos";
 import { equipment, facilities, business } from "@/config/business";
 import { caseStudies } from "@/data/case-studies";
 import { homeFaqIds } from "@/data/faqs";
@@ -120,6 +120,7 @@ export default function HomePage() {
             <PhoneLink className="inline-flex min-h-11 items-center text-ink underline underline-offset-4" />
             <MailLink className="inline-flex min-h-11 items-center text-ink underline underline-offset-4" />
           </p>
+          <Studio2Hero className="mt-10" />
         </Container>
         <Container className="grid border-t border-line sm:grid-cols-3">
           {[
@@ -200,8 +201,8 @@ export default function HomePage() {
             <h2 className="font-display text-4xl text-ink md:text-5xl">The studios</h2>
             <p className="mt-4 leading-relaxed text-muted">
               Two rooms in {business.address.locality}. Couch and desk sets, a TV
-              for your branding, and the kit below. These drawings are not
-              photographs. A proper studio shoot has not been added yet.
+              that can show a client logo, and the kit below. The photograph is
+              Studio 2.
             </p>
             <ul className="mt-6 border-t border-line">
               {[...equipment, ...facilities].map((item) => (
@@ -214,10 +215,7 @@ export default function HomePage() {
               Studio details
             </Link>
           </div>
-          <div className="grid gap-4">
-            <SetDiagram variant="couch" />
-            <SetDiagram variant="desk" />
-          </div>
+          <ClientLogoScreen />
         </Container>
       </section>
 

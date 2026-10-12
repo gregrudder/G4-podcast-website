@@ -24,7 +24,7 @@ export const studios: readonly Studio[] = [
     name: "Studio 2",
     anchor: "studio-2",
     summary:
-      "The second podcast studio in Wishaw. Capacity and step-free access are not published yet.",
+      "The second podcast studio in Wishaw. It has more than one set-up, shown in the photographs on this page. Capacity and step-free access are not published yet.",
   },
 ];
 

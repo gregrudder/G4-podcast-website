@@ -25,9 +25,7 @@ export function localBusinessNode() {
     url: business.siteUrl,
     email: business.email,
     telephone: business.phone.e164,
-    image: absoluteUrl(
-      "/og?title=Podcast%20and%20video%20studios%20in%20Wishaw",
-    ),
+    image: absoluteUrl("/images/g4-studio-2-wishaw-armchairs-fireplace.jpg"),
     address: {
       "@type": "PostalAddress",
       addressLocality: business.address.locality,

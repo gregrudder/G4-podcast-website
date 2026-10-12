@@ -1,5 +1,6 @@
 import { equipment, facilities } from "@/config/business";
 import { SetDiagram } from "@/components/set-diagram";
+import { Studio2Gallery } from "@/components/studio-2-photos";
 import { sets, studios } from "@/data/studios";
 
 export function StudioSpecs() {
@@ -21,6 +22,12 @@ export function StudioSpecs() {
             </article>
           ))}
         </div>
+        <div className="mt-10">
+          <Studio2Gallery />
+        </div>
+        <p className="mt-10 max-w-3xl text-sm leading-relaxed text-muted">
+          The drawings below are diagrams of the couch and desk sets, not photographs of those layouts.
+        </p>
         <div className="mt-6 grid gap-6 md:grid-cols-2">
           {sets.map((set) => (
             <div key={set.id}>

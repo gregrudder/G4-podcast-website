@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ClientLogoScreen } from "@/components/studio-2-photos";
 import { ServiceView } from "@/components/service-view";
 import { getService } from "@/data/services";
 import { pageMeta } from "@/lib/metadata";
@@ -12,5 +13,9 @@ export const metadata: Metadata = pageMeta({
 });
 
 export default function BusinessPodcastsPage() {
-  return <ServiceView service={service} />;
+  return (
+    <ServiceView service={service}>
+      <ClientLogoScreen className="max-w-3xl" />
+    </ServiceView>
+  );
 }
