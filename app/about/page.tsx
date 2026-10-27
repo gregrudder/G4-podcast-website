@@ -11,7 +11,7 @@ import { pageMeta } from "@/lib/metadata";
 export const metadata: Metadata = pageMeta({
   title: "About G4 Podcast Studio & Marketing",
   description:
-    "G4 Marketing Ltd trades as G4 Podcast Studio & Marketing. Two podcast studios in Wishaw, North Lanarkshire, with free parking.",
+    "G4 Marketing Ltd trades as G4 Podcast Studio & Marketing. Two podcast studios at 9 Pickering Works, Netherton Road, Wishaw ML2 0EQ, with free parking.",
   path: "/about",
 });
 
@@ -34,12 +34,13 @@ export default function AboutPage() {
           </p>
           <p>
             The website is {business.domain}. Enquiries go to <MailLink />, or
-            call <PhoneLink />, or <WhatsAppLink />. The street address and
-            opening hours are not published on this page yet.
+            call <PhoneLink />, or <WhatsAppLink />. Opening hours are not
+            published on this page yet.
           </p>
           <h2>Where</h2>
           <p>
-            {business.address.locality}, {business.address.region},{" "}
+            {business.address.streetAddress}, {business.address.locality},{" "}
+            {business.address.region} {business.address.postcode},{" "}
             {business.address.country}. Free parking on site. Clients come from
             Wishaw, the rest of Lanarkshire, and Glasgow. There is no second
             address in Glasgow, and this site does not pretend there is one.

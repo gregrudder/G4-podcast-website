@@ -28,8 +28,10 @@ export function localBusinessNode() {
     image: absoluteUrl("/images/g4-studio-2-wishaw-armchairs-fireplace.jpg"),
     address: {
       "@type": "PostalAddress",
+      streetAddress: business.address.streetAddress,
       addressLocality: business.address.locality,
       addressRegion: business.address.region,
+      postalCode: business.address.postcode,
       addressCountry: business.address.countryCode,
     },
     parentOrganization: { "@id": `${business.siteUrl}/#organization` },

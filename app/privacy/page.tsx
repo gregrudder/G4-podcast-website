@@ -24,9 +24,9 @@ export default function PrivacyPage() {
       <p>
         The data controller is {business.legalName}, trading as {business.tradingName}.
         The website is {business.domain}. Contact <MailLink /> or call{" "}
-        <PhoneLink />. The full postal address is not published on this site yet.
-        The studios are in {business.address.locality}, {business.address.region},{" "}
-        {business.address.country}.
+        <PhoneLink />. The postal address is {business.address.streetAddress},{" "}
+        {business.address.locality}, {business.address.region}{" "}
+        {business.address.postcode}, {business.address.country}.
       </p>
       <h2>What we collect</h2>
       <p>If you use the enquiry form, we receive:</p>

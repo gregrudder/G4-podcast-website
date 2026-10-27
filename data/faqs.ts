@@ -25,7 +25,7 @@ export const faqs: readonly Faq[] = [
   {
     id: "where",
     question: "Where is the studio?",
-    answer: `The studios are in Wishaw, North Lanarkshire, Scotland. People come from Glasgow, Lanarkshire and further afield. The street address is not published on this website yet. Email ${email} and we will send directions.`,
+    answer: `The studios are at ${business.address.streetAddress}, ${business.address.locality}, ${business.address.region} ${business.address.postcode}, ${business.address.country}. People come from Glasgow, Lanarkshire and further afield. Email ${email} if you need directions.`,
   },
   {
     id: "parking",
@@ -93,7 +93,7 @@ export const faqs: readonly Faq[] = [
     id: "visit",
     question: "Can I see the studio before I book?",
     answer:
-      "Ask in your enquiry if you want to visit first. We will say whether a visit is possible. The street address is not on this site yet, and the rooms are used for sessions, so do not turn up unannounced.",
+      `Ask in your enquiry if you want to visit first. We will say whether a visit is possible. The studios are at ${business.address.streetAddress}, ${business.address.locality} ${business.address.postcode}. The rooms are used for sessions, so do not turn up unannounced.`,
   },
   {
     id: "first-time",

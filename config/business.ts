@@ -29,10 +29,8 @@ export const business = {
     label: "WhatsApp us",
   },
   address: {
-    streetAddress: null as string | null,
-    streetAddressStatus: NEEDS_CONFIRMATION,
-    postcode: null as string | null,
-    postcodeStatus: NEEDS_CONFIRMATION,
+    streetAddress: "9 Pickering Works, Netherton Road",
+    postcode: "ML2 0EQ",
     locality: "Wishaw",
     region: "North Lanarkshire",
     country: "Scotland",

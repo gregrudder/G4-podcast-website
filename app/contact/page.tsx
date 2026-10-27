@@ -51,9 +51,11 @@ export default function ContactPage() {
             <li>You decide. The booking terms page explains that the email is the agreement.</li>
           </ol>
           <p className="mt-6 text-sm leading-relaxed text-muted">
-            {business.address.locality}, {business.address.region}.{" "}
-            {business.parking}. The street address is sent when you are booking,
-            not published on this page yet.
+            {business.address.streetAddress}, {business.address.locality},{" "}
+            {business.address.region} {business.address.postcode},{" "}
+            {business.address.country}. {business.parking}. Opening hours are
+            not published. The rooms are used for sessions, so do not turn up
+            unannounced.
           </p>
         </aside>
       </Container>

@@ -46,7 +46,8 @@ export function SiteFooter() {
             {business.legalName}, trading as {business.tradingName}.
           </p>
           <p className="mt-3 text-sm leading-relaxed text-muted">
-            {business.address.locality}, {business.address.region},{" "}
+            {business.address.streetAddress}, {business.address.locality},{" "}
+            {business.address.region} {business.address.postcode},{" "}
             {business.address.country}. {business.parking}.
           </p>
           <p className="mt-3 text-sm">

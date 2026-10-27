@@ -1,12 +1,12 @@
 # Needs confirmation from Greg
 
-Confirmed and already in the site: legal entity G4 Marketing Ltd; trading name G4 Podcast Studio & Marketing; domain g4podcast.net; email info@g4-marketing.net; phone and WhatsApp 07925 707766 (+44 7925 707766); the G4 monogram and “podcast studio” lockup in `public/brand`; Wishaw, North Lanarkshire, Scotland; two podcast studios; free parking; on-location recording; the kit list in `config/business.ts`; the services list; hourly studio rates in `data/packages.ts` (Bronze £40, Silver £70, Gold £90, Platinum £130, all + VAT) with the inclusions from Greg's rate card; social media management with no set price; permission to name A Pint and Two Shots (Grado, Stephen Purdon, Chris Toal), Leather’d (MMA, Paul Craig and Ross Cooper) and Roughing The Podcasters (NFL). No outcome statistics are published.
+Confirmed and already in the site: legal entity G4 Marketing Ltd; trading name G4 Podcast Studio & Marketing; domain g4podcast.net; email info@g4-marketing.net; phone and WhatsApp 07925 707766 (+44 7925 707766); the G4 monogram and “podcast studio” lockup in `public/brand`; street address 9 Pickering Works, Netherton Road, Wishaw ML2 0EQ, North Lanarkshire, Scotland; two podcast studios; free parking; on-location recording; the kit list in `config/business.ts`; the services list; hourly studio rates in `data/packages.ts` (Bronze £40, Silver £70, Gold £90, Platinum £130, all + VAT) with the inclusions from Greg's rate card; social media management with no set price; permission to name A Pint and Two Shots (Grado, Stephen Purdon, Chris Toal), Leather’d (MMA, Paul Craig and Ross Cooper) and Roughing The Podcasters (NFL). No outcome statistics are published.
 
 The old website and the Daily Record used some of the values below. They are **not** on the new site. Publish them only after Greg confirms they are still correct.
 
 ## Contact and place
 
-- [ ] Full street address and postcode. The old site and press used 9 Pickering Works, Netherton Road, Wishaw ML2 0EQ. Confirm the visitor entrance, not only the registered office.
+- [x] Street address and postcode: 9 Pickering Works, Netherton Road, Wishaw ML2 0EQ. Opening hours, the VAT number and the company number are still not published.
 - [ ] Opening hours, and whether evenings or weekends are bookable. Public place data has shown “Open 24 hours”, which should not be copied if it is wrong.
 - [ ] Drive times and directions from Glasgow, Motherwell, Hamilton and East Kilbride. Nearest station and walking or taxi note. Do not publish a guessed mileage.
 - [ ] Parking beyond “free on site”: where it is, how many spaces, any restriction.
@@ -46,8 +46,8 @@ The old website and the Daily Record used some of the values below. They are **n
 - [ ] Current team, roles and photos. The old site listed Greg Rudder, Grant Rudder and Craig Pollock. Press has also named Nicole Rudder. None of these are published as the current team.
 - [ ] Photographs of both studios, both sets, the TV with branding, kit, exterior, entrance, parking, and sessions with consent. Diagrams are placeholders. No stock photos of people.
 - [x] Player 2 Pro pitch stills (Calvin Miller and Dylan Tait) and Meet Your Competition studio stills are published. Host names are not published for Meet Your Competition.
-- [ ] Scottish Podcast Awards '26 trophy photograph for A Pint and Two Shots. Copy uses the tag Best Entertainment and Pop Culture Podcast and does not name the hosts in that photograph.
-- [ ] Higher Level MMA mat stills from the Leather'd Patreon technique session with Ross Cooper, Sean Clancy Jnr and Paul Craig. A separate 2025 Higher Level portrait set is not that session and is not used.
+- [x] Scottish Podcast Awards '26 trophy photograph is on the A Pint and Two Shots page. Copy stays as tagged Best Entertainment and Pop Culture Podcast. The hosts in that photograph are not named.
+- [ ] Higher Level MMA mat stills from the Leather'd Patreon technique session with Ross Cooper, Sean Clancy Jnr and Paul Craig. The May 2026 Facebook collage was not in the files supplied to this build, and Dropbox does not have a matching still. A separate 2025 Higher Level portrait set is not that session and is not used. The page still says the mat photographs are not on it.
 - [ ] A short studio walkthrough video, and episode URLs that can be embedded.
 - [ ] Host names for Roughing The Podcasters, if they should be published.
 - [ ] Whether any further shows (for example Ewen and Cat Uncut, mentioned only in the discovery notes) may be named. They are not on the site.

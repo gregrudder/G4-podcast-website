@@ -110,7 +110,7 @@ export const workItems: readonly WorkItem[] = [
     title: "A Pint and Two Shots",
     categories: ["Podcasts"],
     summary:
-      "Greg's sports and chat podcast, produced by G4 and recorded in the Wishaw studio. The set branding includes Grado and Boab. At the Scottish Podcast Awards '26 the show was tagged as Best Entertainment and Pop Culture Podcast. Hosts were not named in that post. The trophy photograph is not on this page yet.",
+      "Greg's sports and chat podcast, produced by G4 and recorded in the Wishaw studio. The set branding includes Grado and Boab. At the Scottish Podcast Awards '26 the show was tagged as Best Entertainment and Pop Culture Podcast. Hosts were not named in that post.",
     images: [
       {
         src: "/portfolio/apats/DSC00102.jpg",
@@ -118,6 +118,14 @@ export const workItems: readonly WorkItem[] = [
         caption: "A Pint and Two Shots, recorded in the Wishaw studio.",
         width: 1600,
         height: 1066,
+      },
+      {
+        src: "/portfolio/apats/scottish-podcast-awards-2026.jpg",
+        alt: "Two hosts of A Pint and Two Shots with the Scottish Podcast Awards '26 trophy, in front of the awards backdrop.",
+        caption:
+          "A Pint and Two Shots at the Scottish Podcast Awards '26. The show was tagged as Best Entertainment and Pop Culture Podcast. The hosts are not named on this photograph.",
+        width: 1200,
+        height: 2608,
       },
       {
         src: "/portfolio/apats/DSC00155.jpg",

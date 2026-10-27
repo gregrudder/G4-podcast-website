@@ -74,8 +74,10 @@ export default function BookingTermsPage() {
       </p>
       <h2>Contact</h2>
       <p>
-        {business.legalName}, trading as {business.tradingName}. Email{" "}
-        <MailLink />.
+        {business.legalName}, trading as {business.tradingName}.{" "}
+        {business.address.streetAddress}, {business.address.locality},{" "}
+        {business.address.region} {business.address.postcode},{" "}
+        {business.address.country}. Email <MailLink />.
       </p>
     </ArticlePage>
   );
