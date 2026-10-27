@@ -7,7 +7,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { business } from "@/config/business";
-import { lowestStudioRate } from "@/data/packages";
+import { fromHourlyLabel } from "@/data/packages";
 import { allowIndexing } from "@/lib/indexing";
 import "./globals.css";
 
@@ -36,8 +36,7 @@ export const metadata: Metadata = {
     default: `${business.tradingName}`,
     template: `%s | ${business.tradingName}`,
   },
-  description:
-    `Two multi-camera podcast studios in Wishaw, North Lanarkshire, with free parking. Studio hire from £${lowestStudioRate()} an hour plus VAT.`,
+  description: `Podcasts, content and social from two studios in Wishaw, North Lanarkshire. ${fromHourlyLabel()}. Social media management is quoted case by case.`,
   applicationName: business.tradingName,
   authors: [{ name: business.legalName }],
   creator: business.legalName,
@@ -59,6 +58,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={`${outfit.variable} ${instrument.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">
+        <div className="grain" aria-hidden="true" />
         <a className="skip-link" href="#main">
           Skip to content
         </a>

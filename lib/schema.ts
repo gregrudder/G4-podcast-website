@@ -1,5 +1,5 @@
 import { business } from "@/config/business";
-import { studioPackages } from "@/data/packages";
+import { formatPounds, studioPackages } from "@/data/packages";
 import type { Faq } from "@/data/faqs";
 
 export function absoluteUrl(path: string): string {
@@ -76,7 +76,7 @@ export function studioOfferNodes() {
     price: String(tier.hourlyRateExVat),
     priceCurrency: "GBP",
     url: absoluteUrl("/pricing"),
-    description: `${tier.name} studio rate, ${tier.hourlyRateExVat} pounds an hour, excluding VAT. What the hour includes is confirmed in writing when you book.`,
+    description: `${tier.name} is ${formatPounds(tier.hourlyRateExVat)} an hour, excluding VAT. ${tier.inclusions.join(". ")}.`,
     priceSpecification: {
       "@type": "UnitPriceSpecification",
       price: String(tier.hourlyRateExVat),

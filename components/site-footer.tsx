@@ -59,7 +59,7 @@ export function SiteFooter() {
             <WhatsAppLink className="inline-flex min-h-11 items-center text-ink underline underline-offset-4" />
           </p>
           <p className="mt-4 text-sm text-muted">
-            Studio rates are hourly and exclude VAT.
+            Studio hire is hourly and excludes VAT. Social media management has no set price.
           </p>
         </div>
         <LinkGroup title="Services" links={footerServiceLinks} />

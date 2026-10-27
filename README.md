@@ -20,11 +20,22 @@ npm run typecheck
 
 Hourly studio rates live only in `data/packages.ts`.
 
-- Bronze, Silver, Gold and Platinum: change `hourlyRateExVat`.
-- Do not add inclusions until Greg confirms them. The `inclusions` field stays `null` on purpose.
-- Editing and short-form stay quote-based. Social media management stays “no fixed price” with the consultation call to action.
+- Bronze £40, Silver £70, Gold £90, Platinum £130: change `hourlyRateExVat`.
+- Inclusions are the published rate card. Edit the `inclusions` arrays in the same file. Do not invent extra bullets.
+- Further revisions are `extraRevisionFee` (£5).
+- Social media management has no price. Do not add one. The call to action is “Discuss Social Media Management” / “Request a Quote”.
 
 The pricing page, homepage, FAQs and studio `Offer` schema all read this file.
+
+## Edit portfolio and placeholders
+
+Photographs and case studies: `data/portfolio.ts`, with narrative in `content/work/<slug>.mdx`. A slug in `data/case-studies.ts` must have a matching MDX file.
+
+Missing assets are listed in `data/shot-list.ts` with IDs such as `G4-HERO-01`. `/admin/shot-list` can update status into `content/shot-status.json` after you set `ADMIN_PASSWORD`. Commit that JSON and redeploy. Vercel does not keep a write to the serverless disk.
+
+## Motion
+
+Page transitions, headline entrances, scroll reveals, card lift and image zoom are CSS, with a small Intersection Observer in `components/reveal.tsx`. They do not run when `prefers-reduced-motion` is set.
 
 ## Edit business facts
 
@@ -74,11 +85,11 @@ Copy `.env.example` to `.env.local` for local work. Never commit real keys.
 
 Conversion events, when the relevant tool is enabled:
 
-- `form_submit` — Resend accepted the enquiry. The email fallback and the honeypot do not count.
-- `mailto_click` — a `mailto:` link.
-- `tel_click` — the phone link `tel:+447925707766`. The visible number is 07925 707766.
-- `whatsapp_click` — a WhatsApp link (`https://wa.me/447925707766`), including the mobile “WhatsApp us” button.
-- `booking_cta` — “Book a session”, “Book a consultation”, and the other enquiry buttons. The `intent` parameter is the checkbox id.
+- `form_submit`: Resend accepted the enquiry. The email fallback and the honeypot do not count.
+- `mailto_click`: a `mailto:` link.
+- `tel_click`: the phone link `tel:+447925707766`. The visible number is 07925 707766.
+- `whatsapp_click`: a WhatsApp link (`https://wa.me/447925707766`), including the mobile “WhatsApp us” button.
+- `booking_cta`: “Arrange a Visit” and the other enquiry buttons. The `intent` parameter is the checkbox id.
 
 ### DNS, when Greg is ready to cut over
 

@@ -64,7 +64,7 @@ export const business = {
   googleBusinessProfileUrl: null as string | null,
   googleBusinessProfileStatus: NEEDS_CONFIRMATION,
   /** ISO date used for sitemap lastmod on non-MDX pages. */
-  contentUpdated: "2026-10-11",
+  contentUpdated: "2026-10-27",
   copyrightYear: 2026,
 } as const;
 

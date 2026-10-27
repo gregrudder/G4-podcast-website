@@ -1,5 +1,10 @@
 import { business } from "@/config/business";
-import { studioRateList } from "@/data/packages";
+import {
+  extraRevisionFee,
+  formatPounds,
+  studioPackages,
+  studioRateList,
+} from "@/data/packages";
 
 export type Faq = {
   id: string;
@@ -8,6 +13,13 @@ export type Faq = {
 };
 
 const email = business.email;
+
+const inclusionSummary = studioPackages
+  .map(
+    (tier) =>
+      `${tier.name} (${formatPounds(tier.hourlyRateExVat)} an hour): ${tier.inclusions.join("; ")}.`,
+  )
+  .join(" ");
 
 export const faqs: readonly Faq[] = [
   {
@@ -24,13 +36,12 @@ export const faqs: readonly Faq[] = [
   {
     id: "studio-price",
     question: "How much does the studio cost?",
-    answer: `Studio time is charged by the hour, plus VAT. The rates are ${studioRateList()}, all excluding VAT. Editing, short-form clips and on-location work are quoted separately. The pricing page has the full table.`,
+    answer: `Studio hire is hourly, plus VAT. The rates are ${studioRateList()}, all excluding VAT. What each hour includes is on the pricing page. Social media management has no set price.`,
   },
   {
     id: "inclusions",
     question: "What is included in Bronze, Silver, Gold and Platinum?",
-    answer:
-      "The hourly rates are confirmed. The list of what each tier includes is not published yet, so we will not guess at cameras, a producer, revisions or clips. We confirm what your hour covers in writing before you book.",
+    answer: `${inclusionSummary} Additional revisions after the included rounds are ${formatPounds(extraRevisionFee)} each. Where the card says individual synced video files have an additional cost, that amount is confirmed in the quote. Social media management is not one of these packages.`,
   },
   {
     id: "video",
@@ -42,25 +53,25 @@ export const faqs: readonly Faq[] = [
     id: "editing",
     question: "Do you edit the episode?",
     answer:
-      "Yes. Podcast editing and video editing are available. They are quoted per job, not taken from the hourly studio card. You can add an edit to a studio booking, or send files you recorded somewhere else.",
+      "Silver, Gold and Platinum include a complete edited podcast, with a set number of revisions. Bronze does not. If you recorded somewhere else, remote editing is quoted per job.",
   },
   {
     id: "clips",
     question: "Can you make short clips?",
     answer:
-      "Yes. We cut short-form video for TikTok, Instagram Reels and YouTube Shorts, and we repurpose longer recordings into those formats. The price is a quote. Tell us how many clips you need and roughly how long they should be.",
+      "Yes. Gold includes 1 basic clip, TikTok or Reel of your choice. Platinum includes 3, and a YouTube thumbnail. Further clips are quoted. There is no separate clip package price on this site.",
   },
   {
     id: "social",
     question: "Do you manage social media accounts?",
     answer:
-      "Yes. Social media management is available and it does not have a fixed price. Book a consultation and we will say what the work covers and what it costs before anything starts.",
+      "Yes. Social media management is quoted case by case. There is no set price. Book a consultation and we will say what the work covers and what it costs before anything starts. We do not promise followers, sales or a viral result.",
   },
   {
     id: "on-location",
     question: "Do you record outside the studio?",
     answer:
-      "Yes. We record on location as well as in the two Wishaw studios. Travel, the minimum time and the kit for that job are confirmed when you enquire. There is no set call-out price on this website.",
+      "Yes. We record on location as well as in the two Wishaw studios, including rooms with an audience. That is a recording, not a livestream, and we do not sell standalone live production. Travel and the kit are quoted. The hourly studio card does not automatically apply off site.",
   },
   {
     id: "booking",
@@ -71,7 +82,7 @@ export const faqs: readonly Faq[] = [
     id: "files",
     question: "When do I get the files, and who owns them?",
     answer:
-      "Delivery, how long we keep files, and who owns the recording are written into the confirmation for that job. Those terms are not fixed on this website yet. The booking terms page explains how a booking is agreed.",
+      "Delivery, how long we keep files, and who owns the recording are written into the confirmation for that job. Those terms are not fixed on this website yet. Bronze includes the raw audio and video files. The booking terms page explains how a booking is agreed.",
   },
   {
     id: "hours",
@@ -88,13 +99,13 @@ export const faqs: readonly Faq[] = [
     id: "first-time",
     question: "I have not recorded a podcast before. Can I still book?",
     answer:
-      "Yes. You do not need to bring microphones or cameras. Bring the people, a running order, and a logo file if you want it on the TV. Say in the enquiry that it is your first session and we will explain how the hour will run.",
+      "Yes. You do not need to bring microphones or cameras. On Bronze you do need your own SD cards. Bring the people, a running order, and a logo file if you want it on the TV. Say in the enquiry that it is your first session.",
   },
   {
     id: "vat",
     question: "Are the prices plus VAT?",
     answer:
-      "Yes. The studio rates are hourly and exclude VAT. VAT is added on the bill. The VAT number is not published on this website yet.",
+      "The hourly studio rates exclude VAT. VAT is added on the bill. The VAT number is not published on this website yet. The £5 further-revision fee is listed on the rate card as £5 per revision.",
   },
   {
     id: "company",
@@ -106,9 +117,7 @@ export const faqs: readonly Faq[] = [
 export function getFaqs(ids: readonly string[]): Faq[] {
   return ids.map((id) => {
     const faq = faqs.find((item) => item.id === id);
-    if (!faq) {
-      throw new Error(`Unknown FAQ id: ${id}`);
-    }
+    if (!faq) throw new Error(`Unknown FAQ id: ${id}`);
     return faq;
   });
 }

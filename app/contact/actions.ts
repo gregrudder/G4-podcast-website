@@ -3,7 +3,11 @@
 import { Resend } from "resend";
 import { z } from "zod";
 import { business } from "@/config/business";
-import { enquiryOptions, isEnquiryOptionId } from "@/data/enquiry-options";
+import {
+  enquiryOptions,
+  isEnquiryOptionId,
+  resolveEnquiryIntent,
+} from "@/data/enquiry-options";
 
 export type EnquiryState = {
   status: "idle" | "error" | "sent" | "fallback";
@@ -88,7 +92,10 @@ export async function submitEnquiry(
     organisation: String(formData.get("organisation") ?? ""),
     email: String(formData.get("email") ?? ""),
     phone: String(formData.get("phone") ?? ""),
-    interests: formData.getAll("interest").map(String),
+    interests: formData
+      .getAll("interest")
+      .map(String)
+      .map((value) => resolveEnquiryIntent(value) ?? value),
     message: String(formData.get("message") ?? ""),
   });
 

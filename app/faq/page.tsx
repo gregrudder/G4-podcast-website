@@ -8,7 +8,7 @@ import { pageMeta } from "@/lib/metadata";
 export const metadata: Metadata = pageMeta({
   title: "Podcast studio FAQ",
   description:
-    "Where the Wishaw studios are, hourly rates, what is still to be confirmed, editing, clips, on-location recording and how to book.",
+    "Where the Wishaw studios are, the hourly packages, editing, clips, on-location recording and how to book.",
   path: "/faq",
 });
 

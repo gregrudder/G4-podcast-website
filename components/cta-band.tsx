@@ -5,9 +5,9 @@ import { MailLink, PhoneLink, WhatsAppLink } from "@/components/mail-link";
 
 export function CtaBand({
   title = "Ready to record?",
-  body = "Tell us the show or the business, what you need, and any dates. We reply by email with the rate or a quote. Nothing is booked until we confirm it in writing.",
-  intent = "studio-recording",
-  cta = "Book a session",
+  body = "Tell us the show or the business, what you need, and any dates. We reply by email with the hourly package or a quote. Nothing is booked until we confirm it in writing.",
+  intent = "studio",
+  cta = "Arrange a Visit",
 }: {
   title?: string;
   body?: string;

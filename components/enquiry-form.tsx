@@ -3,17 +3,13 @@
 import { useActionState, useEffect, useRef, useSyncExternalStore } from "react";
 import { submitEnquiry, type EnquiryState } from "@/app/contact/actions";
 import { primaryButtonClass } from "@/components/button-styles";
-import { enquiryOptions } from "@/data/enquiry-options";
+import { enquiryLabel, enquiryOptions, resolveEnquiryIntent } from "@/data/enquiry-options";
 import { track } from "@/lib/track";
 
 const initialState: EnquiryState = { status: "idle" };
 
 function readIntent(): string | null {
-  const intent = new URLSearchParams(window.location.search).get("intent");
-  if (intent && enquiryOptions.some((option) => option.id === intent)) {
-    return intent;
-  }
-  return null;
+  return resolveEnquiryIntent(new URLSearchParams(window.location.search).get("intent"));
 }
 
 function emptySubscribe() {
@@ -33,9 +29,11 @@ function FieldError({ id, message }: { id: string; message?: string }) {
   );
 }
 
-export function EnquiryForm() {
+export function EnquiryForm({ intent }: { intent?: string }) {
   const [state, action, pending] = useActionState(submitEnquiry, initialState);
-  const preselected = useSyncExternalStore(emptySubscribe, readIntent, serverIntent);
+  const fromUrl = useSyncExternalStore(emptySubscribe, readIntent, serverIntent);
+  const locked = resolveEnquiryIntent(intent);
+  const preselected = locked ?? fromUrl;
   const tracked = useRef(false);
 
   useEffect(() => {
@@ -179,32 +177,39 @@ export function EnquiryForm() {
         <FieldError id="phone-error" message={state.fieldErrors?.phone} />
       </div>
 
-      <fieldset
-        id="interests"
-        aria-describedby={state.fieldErrors?.interests ? "interest-error" : undefined}
-      >
-        <legend className="text-sm font-medium text-ink">
-          What you are looking for
-        </legend>
-        <div className="mt-3 grid gap-2 sm:grid-cols-2">
-          {enquiryOptions.map((option) => (
-            <label
-              key={`${option.id}-${preselected ?? "none"}`}
-              className="flex min-h-11 items-center gap-3 border border-line px-3 py-2 text-sm text-ink"
-            >
-              <input
-                type="checkbox"
-                name="interest"
-                value={option.id}
-                defaultChecked={preselected === option.id}
-                className="size-4 accent-mark"
-              />
-              {option.label}
-            </label>
-          ))}
+      {locked ? (
+        <div>
+          <input type="hidden" name="interest" value={locked} />
+          <p className="text-sm text-muted">
+            Enquiry: <span className="text-ink">{enquiryLabel(locked)}</span>
+          </p>
         </div>
-        <FieldError id="interest-error" message={state.fieldErrors?.interests} />
-      </fieldset>
+      ) : (
+        <fieldset
+          id="interests"
+          aria-describedby={state.fieldErrors?.interests ? "interest-error" : undefined}
+        >
+          <legend className="text-sm font-medium text-ink">What you are looking for</legend>
+          <div className="mt-3 grid gap-2 sm:grid-cols-2">
+            {enquiryOptions.map((option) => (
+              <label
+                key={`${option.id}-${preselected ?? "none"}`}
+                className="flex min-h-11 items-center gap-3 border border-line px-3 py-2 text-sm text-ink"
+              >
+                <input
+                  type="checkbox"
+                  name="interest"
+                  value={option.id}
+                  defaultChecked={preselected === option.id}
+                  className="size-4 accent-mark"
+                />
+                {option.label}
+              </label>
+            ))}
+          </div>
+          <FieldError id="interest-error" message={state.fieldErrors?.interests} />
+        </fieldset>
+      )}
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-ink">

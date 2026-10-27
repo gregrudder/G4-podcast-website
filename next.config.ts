@@ -51,7 +51,17 @@ const nextConfig: NextConfig = {
     if (process.env.VERCEL_ENV !== "production") {
       headers.push({ key: "X-Robots-Tag", value: "noindex, nofollow" });
     }
-    return [{ source: "/:path*", headers }];
+    return [
+      { source: "/:path*", headers },
+      {
+        source: "/admin",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
+        source: "/admin/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+    ];
   },
 };
 

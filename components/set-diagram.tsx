@@ -75,8 +75,7 @@ export function SetDiagram({
         ))}
       </svg>
       <figcaption className="border-t border-line px-4 py-3 text-sm text-muted">
-        {title}. Diagram only — studio photography has not been added, and this
-        is not a picture of the room or of any person.
+        {title}. Diagram only. This is not a photograph of the room or of any person.
       </figcaption>
     </figure>
   );

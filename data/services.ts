@@ -1,4 +1,4 @@
-import { fromHourlyLabel } from "@/data/packages";
+import { fromHourlyLabel, socialPricing } from "@/data/packages";
 
 export type ServiceSection = {
   heading: string;
@@ -6,15 +6,21 @@ export type ServiceSection = {
   bullets?: readonly string[];
 };
 
+export type ServiceId =
+  | "podcast-studio"
+  | "podcast-production"
+  | "remote-podcast-editing"
+  | "podcast-clips"
+  | "social-media-management"
+  | "content-shoots"
+  | "event-content"
+  | "on-location"
+  | "business-video"
+  | "start-a-podcast";
+
 export type ServiceRecord = {
-  id: string;
-  path:
-    | "/podcast-studio"
-    | "/podcast-production"
-    | "/podcast-editing"
-    | "/short-form-content"
-    | "/business-podcasts"
-    | "/on-location-recording";
+  id: ServiceId;
+  path: string;
   label: string;
   metaTitle: string;
   metaDescription: string;
@@ -25,7 +31,8 @@ export type ServiceRecord = {
   ctaLabel: string;
   sections: readonly ServiceSection[];
   faqIds: readonly string[];
-  related: readonly string[];
+  related: readonly ServiceId[];
+  mediaIds: readonly string[];
 };
 
 const fromHourly = fromHourlyLabel();
@@ -34,45 +41,32 @@ export const services: readonly ServiceRecord[] = [
   {
     id: "podcast-studio",
     path: "/podcast-studio",
-    label: "Studio hire",
-    metaTitle: "Podcast and video studio hire in Wishaw",
+    label: "Podcast studio",
+    metaTitle: "Podcast studio hire in Wishaw",
     metaDescription:
-      `Two multi-camera podcast studios in Wishaw, North Lanarkshire, with free parking. Couch and desk sets. ${fromHourly}.`,
-    h1: "Podcast and video studio hire in Wishaw",
-    standfirst: `Two podcast studios in Wishaw, North Lanarkshire, set up for multi-camera recording. Free parking on site. ${fromHourly}.`,
+      `Two multi-camera podcast studios in Wishaw, North Lanarkshire, with free parking. ${fromHourly}. Bronze, Silver, Gold and Platinum are hourly.`,
+    h1: "A professional podcast studio in Wishaw",
+    standfirst:
+      "Two studios in Wishaw for multi-camera recording, with RØDE audio, professional lighting, and a set you can dress for the show. Free parking and a guest waiting room.",
     priceLabel: fromHourly,
-    enquiryIntent: "studio-recording",
-    ctaLabel: "Book a session",
-    faqIds: [
-      "where",
-      "parking",
-      "studio-price",
-      "inclusions",
-      "video",
-      "first-time",
-      "visit",
-    ],
-    related: ["podcast-production", "podcast-editing", "on-location-recording"],
+    enquiryIntent: "studio",
+    ctaLabel: "Arrange a Studio Visit",
+    faqIds: ["where", "parking", "studio-price", "inclusions", "video", "visit"],
+    related: ["podcast-production", "start-a-podcast", "on-location"],
+    mediaIds: ["G4-STUDIO-01", "G4-STUDIO-02", "G4-STUDIO-03", "G4-STUDIO-06"],
     sections: [
       {
-        heading: "What you are booking",
+        heading: "Two rooms, one site",
         paragraphs: [
-          "You are booking time in one of the two studios. The published prices are hourly rates, plus VAT. They are for the studio session.",
-          "Editing, short clips and social media management are separate. Those are quoted, or, for social media management, agreed after a consultation. We say what the hour covers in writing before you book, because the tier inclusions are not published yet.",
+          "Studio 1 and Studio 2 are both in Wishaw, North Lanarkshire. People come from Glasgow, Motherwell and the rest of Lanarkshire. There is no second address in Glasgow.",
+          "The photographs of Studio 1 are from a Relatively Blonde recording. Studio 2 is shown in its own set-ups. Which room you use is confirmed when you book.",
         ],
       },
       {
-        heading: "Two studios, two kinds of set",
+        heading: "What the hour is",
         paragraphs: [
-          "There are two podcast studios on the Wishaw site. Both are for podcast and video recording. Couch and desk sets are available. A TV can show your branding, so send a logo or a still ahead of the session if you want it on screen.",
-          "How the two rooms differ — size, layout, and which set is in which room — is confirmed when you book. Capacity and step-free access are not published on this page yet. Ask us before you travel if either of those matters.",
-        ],
-      },
-      {
-        heading: "Getting here",
-        paragraphs: [
-          "The studios are in Wishaw, North Lanarkshire, south-east of Glasgow. There is free parking on site, which is the practical reason many Glasgow and Lanarkshire clients drive here rather than book a city-centre room.",
-          "The street address, station details and drive times are not on this page yet. Email info@g4-marketing.net and we will send them. We do not publish a separate page for each nearby town.",
+          "Studio hire is hourly, plus VAT. Bronze is £40, Silver £70, Gold £90 and Platinum £130. The pricing page lists what each hour includes. Bronze is the room, three cameras and the raw files, and no producer sits in. Silver, Gold and Platinum add a producer and an edited podcast.",
+          "Bring your own SD cards on Bronze. Further revisions, after the rounds included in Silver, Gold or Platinum, are £5 each.",
         ],
       },
     ],
@@ -80,197 +74,257 @@ export const services: readonly ServiceRecord[] = [
   {
     id: "podcast-production",
     path: "/podcast-production",
-    label: "Production",
-    metaTitle: "Podcast and video podcast production",
+    label: "Podcast production",
+    metaTitle: "Podcast production in Wishaw",
     metaDescription:
-      "Podcast production from two studios in Wishaw: plan the episode, record multi-camera, then edit. Studio hours are on the rate card. Production is quoted.",
-    h1: "Podcast production from the Wishaw studios",
+      "Plan, record, edit and deliver a podcast with G4 in Wishaw. The hourly packages do not all include the same edit, clips or producer.",
+    h1: "Plan, record, edit, deliver",
     standfirst:
-      "Production is the managed job: plan the episode, record it in the studio or on location, then edit. Video podcasts are part of this, not a separate room.",
-    priceLabel: "Studio hours on the rate card. Production quoted.",
+      "Full podcast production from the Wishaw studios, or around a recording you already have. The package you book decides whether a producer, an edit and clips are included.",
+    priceLabel: fromHourly,
     enquiryIntent: "production",
-    ctaLabel: "Book a session",
-    faqIds: ["editing", "inclusions", "files", "booking", "video"],
-    related: ["podcast-studio", "podcast-editing", "short-form-content"],
+    ctaLabel: "Discuss Your Podcast",
+    faqIds: ["studio-price", "inclusions", "editing", "clips", "booking"],
+    related: ["podcast-studio", "remote-podcast-editing", "podcast-clips"],
+    mediaIds: ["G4-STUDIO-04", "G4-EDIT-01"],
     sections: [
       {
-        heading: "What production covers",
+        heading: "The shape of a job",
         paragraphs: [
-          "Studio hire is the room and the kit, priced by the hour. Production is the work around that hour: agreeing the shape of the episode, recording it with the studio kit, and editing it afterwards.",
-          "A video podcast is the normal way these studios are used. Multi-camera, professional lighting, and a mixer — the RØDECaster Pro II — are already in the room. You do not need a second supplier for picture and sound.",
-        ],
-      },
-      {
-        heading: "How a job is priced",
-        paragraphs: [
-          "The studio hour is on the rate card: Bronze, Silver, Gold and Platinum, all plus VAT. What each tier includes is confirmed in writing, not assumed from the name.",
-          "The edit, any clips, and any extra producer time beyond the booked hour are quoted before work starts. We do not publish a single “episode package” price, because episode length and camera count change the job.",
-        ],
-      },
-      {
-        heading: "Who it is for",
-        paragraphs: [
-          "Existing shows that want a fixed room and a crew, businesses recording a run of episodes, and new shows that want someone else to handle the recording and the edit.",
-          "If you only want the room, book studio time. If you want the episode finished, say so on the form and we will quote the production.",
-        ],
-      },
-    ],
-  },
-  {
-    id: "podcast-editing",
-    path: "/podcast-editing",
-    label: "Editing",
-    metaTitle: "Podcast and video editing",
-    metaDescription:
-      "Podcast editing and video editing, quoted per job. Add an edit to a Wishaw studio session, or send files you recorded elsewhere in the UK.",
-    h1: "Podcast and video editing",
-    standfirst:
-      "Editing is quoted per job. It covers audio podcasts and video podcasts, whether the files were recorded in Wishaw or somewhere else.",
-    priceLabel: "Quoted per job",
-    enquiryIntent: "editing",
-    ctaLabel: "Ask for an edit quote",
-    faqIds: ["editing", "files", "booking", "clips"],
-    related: ["podcast-production", "short-form-content", "podcast-studio"],
-    sections: [
-      {
-        heading: "What you can send",
-        paragraphs: [
-          "Book an edit with studio time, or send files from a session you recorded elsewhere. Podcast editing and video editing are both available. Say which you need. A multi-camera video edit is a different job from a single audio track, and the quote will say so.",
-          "Turnaround, the number of revision rounds, and how the master is delivered are agreed in the quote. They are not fixed on this page.",
+          "A production can include the recording, cameras, audio, a multi-camera edit, colour, a mix, intros, outros, graphics, clips and delivery. Not every one of those is in every hour.",
         ],
         bullets: [
-          "Audio podcast edit",
-          "Video podcast edit, including multi-camera",
-          "Short clips, if you add them to the same quote",
+          "Bronze: studio, 3 cameras, raw audio and video. No producer in the room. Your own SD cards.",
+          "Silver: a producer for the session, and a complete edited podcast with 1 revision.",
+          "Gold: a producer who will fact check and bring up on-screen images and videos, an edit with 2 revisions, and 1 basic clip, TikTok or Reel.",
+          "Platinum: everything in Gold, with 4 revisions, 3 clips, and a YouTube thumbnail.",
         ],
       },
       {
-        heading: "What to put in the brief",
+        heading: "Agreed in writing",
         paragraphs: [
-          "The useful brief is short: the running order, which takes to use, names and spellings, anything that must stay in, and anything that must come out. If you want music, say whether you have the right to use it.",
-          "There is a longer version of this on the guide to briefing an editor. Agree the loudness target and the file format in the quote rather than after the edit is done.",
+          "Individual synced video files have an additional cost where the rate card says so. That amount is confirmed in the quote. The booking email is what you are buying.",
         ],
       },
     ],
   },
   {
-    id: "short-form-content",
-    path: "/short-form-content",
-    label: "Short-form",
-    metaTitle: "Short-form video and content repurposing",
+    id: "remote-podcast-editing",
+    path: "/remote-podcast-editing",
+    label: "Remote editing",
+    metaTitle: "Remote podcast editing in the UK",
     metaDescription:
-      "TikTok, Instagram Reels and YouTube Shorts cut from podcast and video recordings. Quoted per job. Social media management by consultation.",
-    h1: "Short-form clips and content repurposing",
+      "You record. We edit. Remote podcast editing for shows anywhere in the UK. Quoted per job. Studio packages that include an edit are on the pricing page.",
+    h1: "You record. We edit.",
     standfirst:
-      "One recording can become a full episode and a set of vertical clips. Clips for TikTok, Reels and Shorts are quoted. Social media management is a consultation, not a rate card.",
+      "Send the files from anywhere in the UK. We cut the episode to the brief. This is for recordings made outside a G4 studio hour, or for an edit beyond the package.",
     priceLabel: "Quoted per job",
-    enquiryIntent: "short-form",
-    ctaLabel: "Ask for a clip quote",
-    faqIds: ["clips", "social", "booking", "editing"],
-    related: ["podcast-editing", "business-podcasts", "podcast-production"],
+    enquiryIntent: "editing",
+    ctaLabel: "Get an Editing Quote",
+    faqIds: ["editing", "files", "booking"],
+    related: ["podcast-production", "podcast-clips", "podcast-studio"],
+    mediaIds: ["G4-EDIT-01", "G4-EDIT-02"],
     sections: [
       {
-        heading: "Clips from a longer recording",
+        heading: "How a remote edit runs",
         paragraphs: [
-          "Short-form means vertical video for TikTok, Instagram Reels and YouTube Shorts, cut from a podcast or another recording. Content repurposing is the same idea applied to the whole session: the long episode stays intact, and selected moments are cut for social.",
-          "The quote depends on how many clips you want, how long they are, and whether captions are burned in. Those details are not a fixed menu yet. Tell us the numbers and we will price them.",
-        ],
-      },
-      {
-        heading: "Footage from the studio, or footage you already have",
-        paragraphs: [
-          "Clips can be cut from a session recorded at G4. If you want us to cut footage you recorded elsewhere, say so. We will confirm in the quote whether we can take those files.",
-        ],
-      },
-      {
-        heading: "Social media management",
-        paragraphs: [
-          "Social media management — posting and looking after accounts — is a separate service. It has no fixed price. The next step is a consultation, not a package on the rate card.",
-          "Book a consultation and describe the accounts and how often you publish. We will reply with what we would do and what it would cost. Nothing is assumed from a follower count or a monthly bundle, because we do not publish one.",
+          "You upload the recording, send the brief, we edit, you review. Silver, Gold and Platinum studio hours already include a complete edited podcast with a set number of revisions. Bronze does not. A file recorded somewhere else is quoted on its own.",
         ],
       },
     ],
   },
   {
-    id: "business-podcasts",
-    path: "/business-podcasts",
-    label: "Business",
-    metaTitle: "Podcasts and video for businesses",
+    id: "podcast-clips",
+    path: "/podcast-clips",
+    label: "Podcast clips",
+    metaTitle: "Podcast clips, Reels and TikToks",
     metaDescription:
-      `Podcast and video content for businesses, recorded in Wishaw or on location. ${fromHourly}. Production, edits and clips quoted.`,
-    h1: "Podcasts and video for businesses",
+      "Short-form clips from a podcast. Gold includes 1 basic clip. Platinum includes 3, plus a YouTube thumbnail. Further clips are quoted.",
+    h1: "Turn a podcast into clips",
     standfirst:
-      "A business can record in the Wishaw studios, or we can come to you. Studio time is on the rate card. Production, editing and clips are quoted to the job.",
-    priceLabel: "Studio hours on the rate card. Production quoted.",
-    enquiryIntent: "business",
-    ctaLabel: "Book a session",
-    faqIds: ["studio-price", "editing", "clips", "on-location", "booking"],
-    related: ["podcast-production", "short-form-content", "on-location-recording"],
+      "Reels, TikToks and Shorts cut from the episode, with captions and a hook when the brief asks for them. Gold and Platinum include a set number. Anything beyond that is quoted.",
+    priceLabel: "Included in Gold and Platinum, or quoted",
+    enquiryIntent: "clips",
+    ctaLabel: "Turn Your Podcast Into Content",
+    faqIds: ["clips", "inclusions", "social"],
+    related: ["podcast-production", "social-media-management", "content-shoots"],
+    mediaIds: ["G4-CLIPS-01"],
     sections: [
       {
-        heading: "What businesses use the studios for",
+        heading: "What the hour already includes",
         paragraphs: [
-          "A founder interview, a customer conversation, a recruitment piece, or a regular show for clients. The recording is the raw material. The edit and the clips are what get published. You can book the room only, or the room plus the edit.",
-          "The named shows on the work page are sport and personality podcasts: A Pint and Two Shots, Leather’d, and Roughing The Podcasters. They show the kind of recording the studios handle. They are not case studies of a corporate series, and we do not invent results for them.",
-        ],
-      },
-      {
-        heading: "In the studio or at your premises",
-        paragraphs: [
-          "The studios have couch and desk sets, multi-camera recording, professional lighting, and a TV for your branding. Free parking makes a half-day with a small team straightforward.",
-          "If the recording has to happen in your office or at an event, that is on-location work. It is quoted, including travel. The studio is usually the simpler option when people can come to Wishaw.",
-        ],
-      },
-      {
-        heading: "How to start",
-        paragraphs: [
-          "Tell us who will be in the room, what the piece is for, and whether you need an edit and clips. We will say which studio, which hourly rate, and what the rest of the job costs, before you commit.",
+          "Gold includes 1 basic clip, TikTok or Reel of your choice. Platinum includes 3 clips, Reels or TikToks of your choice, and a YouTube thumbnail. There is no separate four-clip package price on this site.",
+          "We do not promise views, followers or a viral result.",
         ],
       },
     ],
   },
   {
-    id: "on-location-recording",
-    path: "/on-location-recording",
+    id: "social-media-management",
+    path: "/social-media-management",
+    label: "Social media",
+    metaTitle: "Social media management in Lanarkshire",
+    metaDescription:
+      "Social media management for businesses in Lanarkshire and beyond. Planning, creation, scheduling and reporting. Quoted case by case. No set price.",
+    h1: "Social media, quoted case by case",
+    standfirst:
+      "Planning, creation, scheduling and reporting for the accounts you actually use. Every enquiry is its own job. There is no social media package price.",
+    priceLabel: socialPricing.label,
+    enquiryIntent: "social",
+    ctaLabel: socialPricing.cta,
+    faqIds: ["social", "booking"],
+    related: ["podcast-clips", "content-shoots", "event-content"],
+    mediaIds: ["G4-SOCIAL-01", "G4-SOCIAL-02"],
+    sections: [
+      {
+        heading: "Book a consultation",
+        paragraphs: [
+          socialPricing.note,
+          "Tell us the accounts, how often you want to post, and whether the pictures come from a studio day, a shoot, or files you already have. We reply with what the work covers and what it costs before anything starts.",
+          "We will not promise followers, sales or a viral result. A recent example of social content, not a management retainer, is the Player 2 Pro pitch shoot with Calvin Miller and Dylan Tait.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "content-shoots",
+    path: "/content-shoots",
+    label: "Content shoots",
+    metaTitle: "One-off content shoots in Lanarkshire",
+    metaDescription:
+      "One-off content shoots for businesses and creators. One shoot, then pictures and clips you can post. Quoted per job.",
+    h1: "One shoot. Plenty of content.",
+    standfirst:
+      "A single recording day for the posts, the clips and the stills you need afterwards. The price is a quote. It is not one of the hourly studio packages unless you are booking the studio.",
+    priceLabel: "Request a Quote",
+    enquiryIntent: "content-shoot",
+    ctaLabel: "Plan a Content Shoot",
+    faqIds: ["booking", "clips"],
+    related: ["social-media-management", "business-video", "podcast-studio"],
+    mediaIds: ["G4-SHOOT-01", "G4-SHOOT-02", "G4-SHOOT-03"],
+    sections: [
+      {
+        heading: "What to tell us",
+        paragraphs: [
+          "Who is in front of the camera, where it happens, and what you need back: stills, vertical clips, or both. Player 2 Pro, with Calvin Miller and Dylan Tait, is one pitch shoot we have already done.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "event-content",
+    path: "/event-content",
+    label: "Event content",
+    metaTitle: "Event social content in Scotland",
+    metaDescription:
+      "Social-first video and photography from events. Recordings in front of an audience. Not a livestream.",
+    h1: "Content from the event, not a livestream",
+    standfirst:
+      "We film the room, the speakers and the audience for the posts that follow. A live audience podcast recording is something we do. We do not sell a livestream or a standalone live production.",
+    priceLabel: "Request a Quote",
+    enquiryIntent: "event",
+    ctaLabel: "Tell Us About Your Event",
+    faqIds: ["on-location", "booking"],
+    related: ["on-location", "social-media-management", "content-shoots"],
+    mediaIds: ["G4-EVENT-01", "G4-EVENT-02"],
+    sections: [
+      {
+        heading: "What we have recorded",
+        paragraphs: [
+          "The Well Society is a live audience podcast recording. There is also an on-location recording with a camera operator and a seated audience. Both are recordings. They are not livestreams.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "on-location",
+    path: "/on-location",
     label: "On location",
-    metaTitle: "On-location podcast and video recording",
+    metaTitle: "On-location podcast recording",
     metaDescription:
-      "On-location podcast and video recording for businesses and events. Travel, kit and price are confirmed per job. Studios remain in Wishaw.",
-    h1: "On-location podcast and video recording",
+      "Podcast recording at your location in Scotland, including rooms with an audience. Quoted per job. Not a livestream.",
+    h1: "Your location. Our production.",
     standfirst:
-      "We record on location when the place is the point: a workplace, a shop floor, an event. The price, the travel and the kit are confirmed for that job. They are not a flat fee on this page.",
+      "We bring cameras and audio to you. That includes a room with an audience. Travel and the kit are quoted. The Wishaw hourly rates do not automatically apply off site.",
     priceLabel: "Quoted per job",
     enquiryIntent: "on-location",
-    ctaLabel: "Ask about a location",
-    faqIds: ["on-location", "booking", "where", "editing"],
-    related: ["podcast-studio", "business-podcasts", "podcast-production"],
+    ctaLabel: "Enquire About Location Recording",
+    faqIds: ["on-location", "booking", "where"],
+    related: ["podcast-studio", "event-content", "business-video"],
+    mediaIds: ["G4-LOCATION-01", "G4-EVENT-01"],
     sections: [
       {
-        heading: "When on-location is the right booking",
+        heading: "Recordings, not a livestream",
         paragraphs: [
-          "Use the Wishaw studios when you want the sets, the lighting and the parking already in place. Book on-location when the recording has to happen somewhere else: your office, a site, or an event.",
-          "Tell us the address and the date. We will say whether we can cover it, what we would bring, how long we need, and what it costs. There is no published mileage rate or minimum hire yet.",
+          "On-location work we can show includes an audience recording, The Well Society live audience podcast, a Player 2 Pro shoot on a football pitch with Calvin Miller and Dylan Tait, and Leather'd technique breakdowns at Higher Level MMA with Ross Cooper, Sean Clancy Jnr and Paul Craig.",
+          "None of that is a livestream, and it is not a standing live-production service.",
         ],
       },
+    ],
+  },
+  {
+    id: "business-video",
+    path: "/business-video",
+    label: "Business video",
+    metaTitle: "Business video and photography in Lanarkshire",
+    metaDescription:
+      "Business video and photography from Wishaw, for companies across Lanarkshire and Glasgow. Quoted per project.",
+    h1: "Business video and photography",
+    standfirst:
+      "Interviews, explainers and stills for a business, shot in the studio or on location. Each project is quoted. This page does not list a package price.",
+    priceLabel: "Request a Quote",
+    enquiryIntent: "business",
+    ctaLabel: "Discuss Your Project",
+    faqIds: ["booking", "video"],
+    related: ["content-shoots", "podcast-production", "on-location"],
+    mediaIds: ["G4-BUSINESS-01", "G4-BUSINESS-02"],
+    sections: [
       {
-        heading: "Kit",
+        heading: "Start with the job",
         paragraphs: [
-          "In the studios the kit is fixed: Sony ZV-E10 cameras, a RØDECaster Pro II, RØDE wireless microphones, professional podcast microphones, multi-camera recording and professional lighting.",
-          "The kit for an on-location job is agreed per booking. Do not assume the full studio rig travels. The quote will list what comes with us.",
+          "Tell us who speaks, where it is used, and whether you need a finished edit or the rushes. We will not invent a client list on this page.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "start-a-podcast",
+    path: "/start-a-podcast",
+    label: "Start a podcast",
+    metaTitle: "Start a podcast in Wishaw",
+    metaDescription:
+      "Got a podcast idea? G4 will help you get it recorded in Wishaw. Hourly studio packages from £40 plus VAT. Inclusions differ by package.",
+    h1: "Got a podcast idea? We'll help you get it recorded.",
+    standfirst:
+      "You do not need microphones or a back catalogue. You need the people, a rough running order, and a note of what you want back.",
+    priceLabel: fromHourly,
+    enquiryIntent: "start-podcast",
+    ctaLabel: "Start Your Podcast",
+    faqIds: ["first-time", "studio-price", "inclusions", "booking"],
+    related: ["podcast-studio", "podcast-production", "podcast-clips"],
+    mediaIds: ["G4-STUDIO-01", "G4-STUDIO-02"],
+    sections: [
+      {
+        heading: "From enquiry to files",
+        paragraphs: [
+          "Enquire, talk it through, choose a studio, record, then edit if the package includes an edit. Clips are in Gold and Platinum, or quoted. We deliver what the confirmation email lists.",
+        ],
+        bullets: [
+          "Enquiry",
+          "A conversation about the show",
+          "Choose Studio 1 or Studio 2",
+          "Record",
+          "Edit, when the package includes it",
+          "Clips, when the package includes them or you ask for a quote",
+          "Delivery",
         ],
       },
     ],
   },
 ];
 
-export function getService(id: string): ServiceRecord {
+export function getService(id: ServiceId): ServiceRecord {
   const service = services.find((item) => item.id === id);
-  if (!service) {
-    throw new Error(`Unknown service: ${id}`);
-  }
+  if (!service) throw new Error(`Unknown service: ${id}`);
   return service;
-}
-
-export function getServiceByPath(path: string): ServiceRecord | undefined {
-  return services.find((item) => item.path === path);
 }

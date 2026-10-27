@@ -1,25 +1,28 @@
 export const primaryNav = [
-  { href: "/podcast-studio", label: "Studio" },
-  { href: "/podcast-production", label: "Production" },
-  { href: "/podcast-editing", label: "Editing" },
-  { href: "/short-form-content", label: "Clips" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
+  { href: "/podcast-studio", label: "Podcast Studio" },
+  { href: "/podcast-production", label: "Podcast Production" },
+  { href: "/content-social", label: "Content & Social" },
+  { href: "/on-location", label: "On Location" },
+  { href: "/our-work", label: "Our Work" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 export const footerServiceLinks = [
   { href: "/podcast-studio", label: "Podcast studio" },
-  { href: "/podcast-production", label: "Production" },
-  { href: "/podcast-editing", label: "Editing" },
-  { href: "/short-form-content", label: "Short-form content" },
-  { href: "/business-podcasts", label: "Business podcasts" },
-  { href: "/on-location-recording", label: "On-location recording" },
+  { href: "/podcast-production", label: "Podcast production" },
+  { href: "/remote-podcast-editing", label: "Remote editing" },
+  { href: "/podcast-clips", label: "Clips" },
+  { href: "/social-media-management", label: "Social media" },
+  { href: "/content-shoots", label: "Content shoots" },
+  { href: "/event-content", label: "Event content" },
+  { href: "/on-location", label: "On location" },
+  { href: "/business-video", label: "Business video" },
+  { href: "/start-a-podcast", label: "Start a podcast" },
   { href: "/pricing", label: "Pricing" },
 ] as const;
 
 export const footerCompanyLinks = [
-  { href: "/work", label: "Work" },
+  { href: "/our-work", label: "Our work" },
   { href: "/guides", label: "Guides" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
@@ -31,3 +34,9 @@ export const footerLegalLinks = [
   { href: "/cookies", label: "Cookies" },
   { href: "/booking-terms", label: "Booking terms" },
 ] as const;
+
+export const visitCta = {
+  href: "/contact?intent=studio",
+  intent: "studio",
+  label: "Arrange a Visit",
+} as const;

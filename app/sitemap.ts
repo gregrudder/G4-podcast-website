@@ -7,12 +7,17 @@ const paths = [
   "/",
   "/podcast-studio",
   "/podcast-production",
-  "/podcast-editing",
-  "/short-form-content",
-  "/business-podcasts",
-  "/on-location-recording",
+  "/remote-podcast-editing",
+  "/podcast-clips",
+  "/social-media-management",
+  "/content-shoots",
+  "/event-content",
+  "/on-location",
+  "/business-video",
+  "/start-a-podcast",
+  "/content-social",
   "/pricing",
-  "/work",
+  "/our-work",
   "/about",
   "/faq",
   "/contact",
@@ -29,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: updated,
   }));
   const studies = caseStudies.map((study) => ({
-    url: new URL(`/work/${study.slug}`, business.siteUrl).toString(),
+    url: new URL(`/our-work/${study.slug}`, business.siteUrl).toString(),
     lastModified: updated,
   }));
   const guides = getGuides().map((guide) => ({

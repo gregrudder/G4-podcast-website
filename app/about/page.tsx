@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Container } from "@/components/container";
 import { GuestWaitingPhoto } from "@/components/guest-waiting-photo";
+import { MediaSlot } from "@/components/media-slot";
 import { MailLink, PhoneLink, WhatsAppLink } from "@/components/mail-link";
 import { business } from "@/config/business";
 import { pageMeta } from "@/lib/metadata";
@@ -47,9 +48,13 @@ export default function AboutPage() {
           <h2 id="team">Team</h2>
           <p>
             Names, roles and photographs of the people who run the studios are
-            not published yet. When they are confirmed, they will go here, on
-            this page, rather than on a separate team page.
+            not published yet. When they are confirmed, they will go here.
           </p>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            <MediaSlot id="G4-TEAM-01" />
+            <MediaSlot id="G4-TEAM-02" />
+            <MediaSlot id="G4-TEAM-03" />
+          </div>
           <h2 id="reviews">Reviews</h2>
           <p>
             Client reviews are not quoted on this website yet. We will add them
@@ -77,7 +82,7 @@ export default function AboutPage() {
           </ul>
           <p>
             The shows named on this site are on the{" "}
-            <Link href="/work">work page</Link>.
+            <Link href="/our-work">work page</Link>.
           </p>
         </div>
       </Container>

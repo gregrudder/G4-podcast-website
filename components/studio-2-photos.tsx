@@ -57,15 +57,17 @@ function StudioPhoto({
   sizes: string;
 }) {
   return (
-    <Image
-      src={shot.src}
-      alt={shot.alt}
-      width={2400}
-      height={1600}
-      sizes={sizes}
-      priority={priority}
-      className="h-auto w-full border border-line"
-    />
+    <div className="media-frame overflow-hidden border border-line">
+      <Image
+        src={shot.src}
+        alt={shot.alt}
+        width={2400}
+        height={1600}
+        sizes={sizes}
+        priority={priority}
+        className="h-auto w-full"
+      />
+    </div>
   );
 }
 

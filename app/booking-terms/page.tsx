@@ -30,10 +30,10 @@ export default function BookingTermsPage() {
       <h2>Studio time</h2>
       <p>
         Studio hire is charged by the hour, plus VAT, at the rates on the{" "}
-        <Link href="/pricing">pricing page</Link>. What a named tier includes
-        is stated in the confirmation for that booking. It is not safe to
-        assume an edit, a producer, extra cameras or revisions are included
-        just because a tier has a name.
+        <Link href="/pricing">pricing page</Link>. That page lists what Bronze,
+        Silver, Gold and Platinum include. The confirmation email is still the
+        booking. Do not assume a livestream or social media management is
+        included in an hour.
       </p>
       <h2>Quoted work</h2>
       <p>
@@ -57,8 +57,8 @@ export default function BookingTermsPage() {
       </ul>
       <p>
         Until you have that email, do not assume a term in your favour or in
-        ours. If a point matters — step-free access, a remote guest, a
-        deadline — put it in the enquiry so it can be answered before you
+        ours. If a point matters (step-free access, a remote guest, a
+        deadline) put it in the enquiry so it can be answered before you
         commit.
       </p>
       <h2>VAT</h2>
