@@ -47,7 +47,7 @@ The old website and the Daily Record used some of the values below. They are **n
 - [ ] Photographs of both studios, both sets, the TV with branding, kit, exterior, entrance, parking, and sessions with consent. Diagrams are placeholders. No stock photos of people.
 - [x] Player 2 Pro pitch stills (Calvin Miller and Dylan Tait) and Meet Your Competition studio stills are published. Host names are not published for Meet Your Competition.
 - [x] Scottish Podcast Awards '26 trophy photograph is on the A Pint and Two Shots page. Copy stays as tagged Best Entertainment and Pop Culture Podcast. The hosts in that photograph are not named.
-- [ ] Higher Level MMA mat stills from the Leather'd Patreon technique session with Ross Cooper, Sean Clancy Jnr and Paul Craig. The May 2026 Facebook collage was not in the files supplied to this build, and Dropbox does not have a matching still. A separate 2025 Higher Level portrait set is not that session and is not used. The page still says the mat photographs are not on it.
+- [x] Higher Level MMA mat stills from the Leather'd Patreon technique session with Ross Cooper, Sean Clancy Jnr and Paul Craig are on the Leather'd page and On location. A separate 2025 Higher Level portrait set is not that session and is not used.
 - [ ] A short studio walkthrough video, and episode URLs that can be embedded.
 - [ ] Host names for Roughing The Podcasters, if they should be published.
 - [ ] Whether any further shows (for example Ewen and Cat Uncut, mentioned only in the discovery notes) may be named. They are not on the site.

@@ -79,7 +79,7 @@ export const workItems: readonly WorkItem[] = [
     title: "Leather'd",
     categories: ["Podcasts", "On-location"],
     summary:
-      "Leather'd, an MMA podcast with Paul Craig and Ross Cooper, recorded with G4 in Wishaw. Also filmed on location at Higher Level MMA with Ross Cooper, Sean Clancy Jnr and Paul Craig, for technique breakdowns for the Leather'd Patreon. The photographs here are from the Wishaw studio. The mat photographs are not on this page yet.",
+      "Leather'd, an MMA podcast with Paul Craig and Ross Cooper, recorded with G4 in Wishaw. Also filmed on location at Higher Level MMA with Ross Cooper, Sean Clancy Jnr and Paul Craig, for technique breakdowns for the Leather'd Patreon.",
     images: [
       {
         src: "/images/leatherd-ross-cooper-paul-craig.jpg",
@@ -101,6 +101,21 @@ export const workItems: readonly WorkItem[] = [
         caption: "Paul Craig, Leather'd.",
         width: 1440,
         height: 810,
+      },
+      {
+        src: "/portfolio/leatherd/higher-level-mma-wide.jpg",
+        alt: "Three men on the blue mats at Higher Level MMA, with a camera in the foreground, during Leather'd technique filming.",
+        caption:
+          "Higher Level MMA. Ross Cooper, Sean Clancy Jnr and Paul Craig, filmed for technique breakdowns for the Leather'd Patreon.",
+        width: 364,
+        height: 410,
+      },
+      {
+        src: "/portfolio/leatherd/higher-level-mma-camera.jpg",
+        alt: "A Sony camera screen showing the Higher Level MMA session during Leather'd technique filming.",
+        caption: "The camera at Higher Level MMA during the Leather'd Patreon technique films.",
+        width: 352,
+        height: 410,
       },
     ],
   },

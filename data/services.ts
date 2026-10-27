@@ -252,7 +252,7 @@ export const services: readonly ServiceRecord[] = [
     ctaLabel: "Enquire About Location Recording",
     faqIds: ["on-location", "booking", "where"],
     related: ["podcast-studio", "event-content", "business-video"],
-    mediaIds: ["G4-LOCATION-01", "G4-LOCATION-03", "G4-EVENT-01"],
+    mediaIds: ["G4-LOCATION-01", "G4-LOCATION-02", "G4-LOCATION-04", "G4-LOCATION-03", "G4-EVENT-01"],
     sections: [
       {
         heading: "Recordings, not a livestream",
