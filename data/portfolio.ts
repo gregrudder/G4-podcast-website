@@ -79,7 +79,7 @@ export const workItems: readonly WorkItem[] = [
     title: "Leather'd",
     categories: ["Podcasts", "On-location"],
     summary:
-      "Leather'd, an MMA podcast with Paul Craig and Ross Cooper, recorded with G4 in Wishaw. Also filmed on location at Higher Level MMA with Ross Cooper, Sean Clancy Jnr and Paul Craig, for technique breakdowns for the Leather'd Patreon.",
+      "Leather'd, an MMA podcast with Paul Craig and Ross Cooper, recorded with G4 in Wishaw. Also filmed on location at Higher Level MMA with Ross Cooper, Sean Clancy Jnr and Paul Craig, for technique breakdowns for the Leather'd Patreon. The photographs here are from the Wishaw studio. The mat photographs are not on this page yet.",
     images: [
       {
         src: "/images/leatherd-ross-cooper-paul-craig.jpg",
@@ -110,7 +110,7 @@ export const workItems: readonly WorkItem[] = [
     title: "A Pint and Two Shots",
     categories: ["Podcasts"],
     summary:
-      "Greg's sports and chat podcast, produced by G4 and recorded in the Wishaw studio. The set branding includes Grado and Boab. At the Scottish Podcast Awards '26 the show was tagged as Best Entertainment and Pop Culture Podcast. Hosts were not named in that post.",
+      "Greg's sports and chat podcast, produced by G4 and recorded in the Wishaw studio. The set branding includes Grado and Boab. At the Scottish Podcast Awards '26 the show was tagged as Best Entertainment and Pop Culture Podcast. Hosts were not named in that post. The trophy photograph is not on this page yet.",
     images: [
       {
         src: "/portfolio/apats/DSC00102.jpg",
@@ -237,8 +237,30 @@ export const workItems: readonly WorkItem[] = [
     title: "Player 2 Pro",
     categories: ["Social", "On-location"],
     summary:
-      "On-location social content with Player 2 Pro, Calvin Miller and Dylan Tait, filmed on a football pitch. Social media content is quoted case by case. There is no set price. The pitch photographs are not on this page yet.",
-    images: [],
+      "On-location social content with Player 2 Pro, Calvin Miller and Dylan Tait, filmed on a football pitch. Social media content is quoted case by case. There is no set price.",
+    images: [
+      {
+        src: "/portfolio/player-2-pro/DSC04538.jpg",
+        alt: "Calvin Miller kicking a football during a Player 2 Pro content shoot on a pitch.",
+        caption: "Calvin Miller, Player 2 Pro, on location.",
+        width: 1600,
+        height: 1066,
+      },
+      {
+        src: "/portfolio/player-2-pro/DSC04325.jpg",
+        alt: "Calvin Miller with a football and a water bottle during a Player 2 Pro content shoot.",
+        caption: "Calvin Miller during the Player 2 Pro pitch shoot.",
+        width: 1600,
+        height: 1066,
+      },
+      {
+        src: "/portfolio/player-2-pro/DSC03772.jpg",
+        alt: "Dylan Tait with a football during a Player 2 Pro content shoot on a pitch.",
+        caption: "Dylan Tait, Player 2 Pro, on location.",
+        width: 1600,
+        height: 1066,
+      },
+    ],
   },
   {
     id: "meet-your-competition",
@@ -246,8 +268,30 @@ export const workItems: readonly WorkItem[] = [
     title: "Meet Your Competition",
     categories: ["Podcasts"],
     summary:
-      "A multi-guest studio session tagged Meet Your Competition. Host names are not published for this recording. Photographs of the session are not on this page yet.",
-    images: [],
+      "A multi-guest studio session tagged Meet Your Competition. Host names are not published for this recording.",
+    images: [
+      {
+        src: "/portfolio/meet-your-competition/DSC00715.jpg",
+        alt: "Two guests at microphones during a Meet Your Competition studio session, with blue and purple lighting.",
+        caption: "Meet Your Competition, a multi-guest studio session.",
+        width: 1600,
+        height: 1066,
+      },
+      {
+        src: "/portfolio/meet-your-competition/DSC00731.jpg",
+        alt: "A guest at the microphone during a Meet Your Competition studio session.",
+        caption: "A guest during Meet Your Competition. The host is not named.",
+        width: 1600,
+        height: 1066,
+      },
+      {
+        src: "/portfolio/meet-your-competition/DSC00746.jpg",
+        alt: "A guest in a football shirt at the microphone during a Meet Your Competition studio session.",
+        caption: "A guest during Meet Your Competition.",
+        width: 1600,
+        height: 2400,
+      },
+    ],
   },
 ];
 

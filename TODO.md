@@ -45,6 +45,9 @@ The old website and the Daily Record used some of the values below. They are **n
 
 - [ ] Current team, roles and photos. The old site listed Greg Rudder, Grant Rudder and Craig Pollock. Press has also named Nicole Rudder. None of these are published as the current team.
 - [ ] Photographs of both studios, both sets, the TV with branding, kit, exterior, entrance, parking, and sessions with consent. Diagrams are placeholders. No stock photos of people.
+- [x] Player 2 Pro pitch stills (Calvin Miller and Dylan Tait) and Meet Your Competition studio stills are published. Host names are not published for Meet Your Competition.
+- [ ] Scottish Podcast Awards '26 trophy photograph for A Pint and Two Shots. Copy uses the tag Best Entertainment and Pop Culture Podcast and does not name the hosts in that photograph.
+- [ ] Higher Level MMA mat stills from the Leather'd Patreon technique session with Ross Cooper, Sean Clancy Jnr and Paul Craig. A separate 2025 Higher Level portrait set is not that session and is not used.
 - [ ] A short studio walkthrough video, and episode URLs that can be embedded.
 - [ ] Host names for Roughing The Podcasters, if they should be published.
 - [ ] Whether any further shows (for example Ewen and Cat Uncut, mentioned only in the discovery notes) may be named. They are not on the site.

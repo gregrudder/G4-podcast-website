@@ -53,13 +53,14 @@ export const services: readonly ServiceRecord[] = [
     ctaLabel: "Arrange a Studio Visit",
     faqIds: ["where", "parking", "studio-price", "inclusions", "video", "visit"],
     related: ["podcast-production", "start-a-podcast", "on-location"],
-    mediaIds: ["G4-STUDIO-01", "G4-STUDIO-02", "G4-STUDIO-03", "G4-STUDIO-06"],
+    mediaIds: ["G4-STUDIO-01", "G4-STUDIO-02", "G4-STUDIO-03", "G4-STUDIO-06", "G4-STUDIO-07"],
     sections: [
       {
         heading: "Two rooms, one site",
         paragraphs: [
           "Studio 1 and Studio 2 are both in Wishaw, North Lanarkshire. People come from Glasgow, Motherwell and the rest of Lanarkshire. There is no second address in Glasgow.",
           "The photographs of Studio 1 are from a Relatively Blonde recording. Studio 2 is shown in its own set-ups. Which room you use is confirmed when you book.",
+          "Meet Your Competition is a multi-guest studio session. Host names are not published for that recording.",
         ],
       },
       {
@@ -251,7 +252,7 @@ export const services: readonly ServiceRecord[] = [
     ctaLabel: "Enquire About Location Recording",
     faqIds: ["on-location", "booking", "where"],
     related: ["podcast-studio", "event-content", "business-video"],
-    mediaIds: ["G4-LOCATION-01", "G4-EVENT-01"],
+    mediaIds: ["G4-LOCATION-01", "G4-LOCATION-03", "G4-EVENT-01"],
     sections: [
       {
         heading: "Recordings, not a livestream",
